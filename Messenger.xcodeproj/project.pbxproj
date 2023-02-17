@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7181A3E2299F38A70005974D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7181A3E1299F38A70005974D /* GoogleService-Info.plist */; };
+		719A46F2299F43C6007E9712 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719A46F1299F43C6007E9712 /* Alert.swift */; };
+		719A46F5299F483F007E9712 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719A46F4299F483F007E9712 /* HomeController.swift */; };
+		719A46F7299F484B007E9712 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719A46F6299F484B007E9712 /* HomeScreen.swift */; };
 		71CD7C61299C14F20047B74B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CD7C60299C14F20047B74B /* AppDelegate.swift */; };
 		71CD7C63299C14F20047B74B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CD7C62299C14F20047B74B /* SceneDelegate.swift */; };
 		71CD7C65299C14F20047B74B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CD7C64299C14F20047B74B /* LoginController.swift */; };
@@ -23,6 +26,9 @@
 		2089A46D8D8CE394CC883800 /* Pods_Messenger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Messenger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A335676C0BBC9AFA843614D /* Pods-Messenger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messenger.release.xcconfig"; path = "Target Support Files/Pods-Messenger/Pods-Messenger.release.xcconfig"; sourceTree = "<group>"; };
 		7181A3E1299F38A70005974D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		719A46F1299F43C6007E9712 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		719A46F4299F483F007E9712 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		719A46F6299F484B007E9712 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		71CD7C5D299C14F20047B74B /* Messenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71CD7C60299C14F20047B74B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71CD7C62299C14F20047B74B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +63,23 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		719A46F0299F43BC007E9712 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				719A46F1299F43C6007E9712 /* Alert.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		719A46F3299F482D007E9712 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				719A46F6299F484B007E9712 /* HomeScreen.swift */,
+				719A46F4299F483F007E9712 /* HomeController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		71CD7C54299C14F20047B74B = {
 			isa = PBXGroup;
 			children = (
@@ -78,8 +101,10 @@
 		71CD7C5F299C14F20047B74B /* Messenger */ = {
 			isa = PBXGroup;
 			children = (
-				71CD7C77299C165C0047B74B /* Register */,
+				719A46F0299F43BC007E9712 /* Alert */,
 				71CD7C74299C15AC0047B74B /* Login */,
+				71CD7C77299C165C0047B74B /* Register */,
+				719A46F3299F482D007E9712 /* Home */,
 				71CD7C60299C14F20047B74B /* AppDelegate.swift */,
 				71CD7C62299C14F20047B74B /* SceneDelegate.swift */,
 				71CD7C69299C14F40047B74B /* Assets.xcassets */,
@@ -235,8 +260,11 @@
 				71CD7C79299C16760047B74B /* RegisterController.swift in Sources */,
 				71CD7C65299C14F20047B74B /* LoginController.swift in Sources */,
 				71CD7C76299C15D40047B74B /* LoginScreen.swift in Sources */,
+				719A46F5299F483F007E9712 /* HomeController.swift in Sources */,
+				719A46F7299F484B007E9712 /* HomeScreen.swift in Sources */,
 				71CD7C61299C14F20047B74B /* AppDelegate.swift in Sources */,
 				71CD7C63299C14F20047B74B /* SceneDelegate.swift in Sources */,
+				719A46F2299F43C6007E9712 /* Alert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
