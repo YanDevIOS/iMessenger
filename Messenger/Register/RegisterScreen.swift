@@ -127,6 +127,14 @@ class RegisterScreen: UIView {
             registerButton.isEnabled = false
         }
     }
+    
+    public func getEmail() -> String {
+        return emailTextField.text ?? ""
+    }
+    
+    public func getPassword() -> String {
+        return passwordTextField.text ?? ""
+    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
