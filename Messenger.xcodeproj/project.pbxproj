@@ -13,6 +13,7 @@
 		719A46F7299F484B007E9712 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719A46F6299F484B007E9712 /* HomeScreen.swift */; };
 		719A46FA299F4D84007E9712 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719A46F9299F4D84007E9712 /* HomeTableViewCell.swift */; };
 		719A46FD299F50AE007E9712 /* DataHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719A46FC299F50AE007E9712 /* DataHome.swift */; };
+		719A4700299FD938007E9712 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719A46FF299FD938007E9712 /* HomeCell.swift */; };
 		71CD7C61299C14F20047B74B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CD7C60299C14F20047B74B /* AppDelegate.swift */; };
 		71CD7C63299C14F20047B74B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CD7C62299C14F20047B74B /* SceneDelegate.swift */; };
 		71CD7C65299C14F20047B74B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CD7C64299C14F20047B74B /* LoginController.swift */; };
@@ -33,6 +34,7 @@
 		719A46F6299F484B007E9712 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		719A46F9299F4D84007E9712 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		719A46FC299F50AE007E9712 /* DataHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHome.swift; sourceTree = "<group>"; };
+		719A46FF299FD938007E9712 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		71CD7C5D299C14F20047B74B /* Messenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71CD7C60299C14F20047B74B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71CD7C62299C14F20047B74B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 		719A46F8299F4D5A007E9712 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				719A46FE299FD8E1007E9712 /* CustomView */,
 				719A46F9299F4D84007E9712 /* HomeTableViewCell.swift */,
 			);
 			path = Cell;
@@ -100,6 +103,14 @@
 				719A46FC299F50AE007E9712 /* DataHome.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		719A46FE299FD8E1007E9712 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				719A46FF299FD938007E9712 /* HomeCell.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 		71CD7C54299C14F20047B74B = {
@@ -284,6 +295,7 @@
 				71CD7C76299C15D40047B74B /* LoginScreen.swift in Sources */,
 				719A46F5299F483F007E9712 /* HomeController.swift in Sources */,
 				719A46FD299F50AE007E9712 /* DataHome.swift in Sources */,
+				719A4700299FD938007E9712 /* HomeCell.swift in Sources */,
 				719A46F7299F484B007E9712 /* HomeScreen.swift in Sources */,
 				719A46FA299F4D84007E9712 /* HomeTableViewCell.swift in Sources */,
 				71CD7C61299C14F20047B74B /* AppDelegate.swift in Sources */,

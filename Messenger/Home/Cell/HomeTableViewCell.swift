@@ -11,25 +11,15 @@ class HomeTableViewCell: UITableViewCell {
     
     static let identifier: String = "HomeTableViewCell"
     
-    lazy var userImageView: UIImageView = {
-        let image = UIImageView()
-        image.translatesAutoresizingMaskIntoConstraints = false
-        image.contentMode = .scaleAspectFit
-        return image
-    }()
-    
-    lazy var nameLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 25)
-        return label
+    lazy var homeCell: HomeCell = {
+        let view = HomeCell()
+        return view
     }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         addSubview()
-        setUpConstraints()
+        configDescriptionCellConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -37,24 +27,19 @@ class HomeTableViewCell: UITableViewCell {
     }
     
     func addSubview() {
-        contentView.addSubview(userImageView)
-        contentView.addSubview(nameLabel)
-    }
-    
-    public func setupCell(data: DataHome) {
-        nameLabel.text = data.name
-        userImageView.image = UIImage(named: data.nameImage)
+        contentView.addSubview(homeCell)
     }
 
-    private func setUpConstraints() {
-        NSLayoutConstraint.activate([
-            userImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            userImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            userImageView.heightAnchor.constraint(equalToConstant: 80),
-            userImageView.widthAnchor.constraint(equalToConstant: 80),
-            
-            nameLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
-            nameLabel.leadingAnchor.constraint(equalTo: userImageView.trailingAnchor, constant: 20),
-        ])
+    
+    public func setupCell(data: DataHome) {
+        homeCell.nameLabel.text = data.name
+        homeCell.userImageView.image = UIImage(named: data.nameImage)
     }
+    
+    func configDescriptionCellConstraints() {
+        homeCell.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+    }
+
 }
