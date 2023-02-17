@@ -133,7 +133,7 @@ class RegisterScreen: UIView {
         configButtonEnabble(false)
         configBackground()
         addComponentsInSubview()
-        confingConstraints()
+        addConstraintsSnapkit()
     }
     
     func addComponentsInSubview() {
@@ -144,6 +144,16 @@ class RegisterScreen: UIView {
         addSubview(emailTextField)
         addSubview(passwordTextField)
         addSubview(registerButton)
+    }
+    
+    func addConstraintsSnapkit() {
+        configTitleLabelConstraints()
+        configBackButtonConstraints()
+        configRegisterUserImageConstraints()
+        configNameTextFieldConstraints()
+        configEmailTextFieldConstraints()
+        configPasswordTextFieldConstraints()
+        configRegisterButtonConstraints()
     }
     
     func configBackground() {
@@ -160,41 +170,66 @@ class RegisterScreen: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func confingConstraints(){
-        NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 40),
-            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
-            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40),
-            
-            backButton.topAnchor.constraint(equalTo: titleLabel.topAnchor),
-            backButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            backButton.heightAnchor.constraint(equalToConstant: 30),
-            backButton.widthAnchor.constraint(equalToConstant: 30),
-            
-            registerUserImage.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20),
-            registerUserImage.centerXAnchor.constraint(equalTo: centerXAnchor),
-            registerUserImage.widthAnchor.constraint(equalToConstant: 150),
-            registerUserImage.heightAnchor.constraint(equalToConstant: 150),
-            
-            nameTextField.topAnchor.constraint(equalTo: registerUserImage.bottomAnchor, constant: 20),
-            nameTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            nameTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            nameTextField.heightAnchor.constraint(equalToConstant: 40),
-            
-            emailTextField.topAnchor.constraint(equalTo: nameTextField.bottomAnchor, constant: 20),
-            emailTextField.leadingAnchor.constraint(equalTo: nameTextField.leadingAnchor),
-            emailTextField.trailingAnchor.constraint(equalTo: nameTextField.trailingAnchor),
-            emailTextField.heightAnchor.constraint(equalTo: nameTextField.heightAnchor),
-            
-            passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 20),
-            passwordTextField.leadingAnchor.constraint(equalTo: nameTextField.leadingAnchor),
-            passwordTextField.trailingAnchor.constraint(equalTo: nameTextField.trailingAnchor),
-            passwordTextField.heightAnchor.constraint(equalTo: nameTextField.heightAnchor),
-            
-            registerButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 20),
-            registerButton.leadingAnchor.constraint(equalTo: nameTextField.leadingAnchor),
-            registerButton.trailingAnchor.constraint(equalTo: nameTextField.trailingAnchor),
-            registerButton.heightAnchor.constraint(equalTo: nameTextField.heightAnchor),
-        ])
+    func configTitleLabelConstraints() {
+        titleLabel.snp.makeConstraints { make in
+            make.top.equalTo(safeAreaLayoutGuide.snp.top).offset(40)
+            make.leading.equalToSuperview().offset(40)
+            make.trailing.equalToSuperview().inset(40)
+        }
     }
+    
+    func configBackButtonConstraints() {
+        backButton.snp.makeConstraints { make in
+            make.top.equalTo(titleLabel.snp.top)
+            make.leading.equalToSuperview().offset(20)
+            make.width.equalTo(30)
+            make.height.equalTo(30)
+        }
+    }
+    
+    func configRegisterUserImageConstraints() {
+        registerUserImage.snp.makeConstraints { make in
+            make.top.equalTo(titleLabel.snp.bottom).offset(20)
+            make.centerX.equalToSuperview()
+            make.width.equalTo(150)
+            make.height.equalTo(150)
+        }
+    }
+    
+    func configNameTextFieldConstraints() {
+        nameTextField.snp.makeConstraints { make in
+            make.top.equalTo(registerUserImage.snp.bottom).offset(20)
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().inset(20)
+            make.height.equalTo(40)
+        }
+    }
+    
+    func configEmailTextFieldConstraints() {
+        emailTextField.snp.makeConstraints { make in
+            make.top.equalTo(nameTextField.snp.bottom).offset(20)
+            make.leading.equalTo(nameTextField.snp.leading)
+            make.trailing.equalTo(nameTextField.snp.trailing)
+            make.height.equalTo(nameTextField.snp.height)
+        }
+    }
+    
+    func configPasswordTextFieldConstraints() {
+        passwordTextField.snp.makeConstraints { make in
+            make.top.equalTo(emailTextField.snp.bottom).offset(20)
+            make.leading.equalTo(nameTextField.snp.leading)
+            make.trailing.equalTo(nameTextField.snp.trailing)
+            make.height.equalTo(nameTextField.snp.height)
+        }
+    }
+    
+    func configRegisterButtonConstraints() {
+        registerButton.snp.makeConstraints { make in
+            make.top.equalTo(passwordTextField.snp.bottom).offset(20)
+            make.leading.equalTo(nameTextField.snp.leading)
+            make.trailing.equalTo(nameTextField.snp.trailing)
+            make.height.equalTo(nameTextField.snp.height)
+        }
+    }
+    
 }
